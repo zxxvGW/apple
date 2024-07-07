@@ -47,7 +47,7 @@ const VideoCarousel = () => {
   }, [isEnd, videoId]);
 
   const handleLoadedMetedata = (
-    i: number,
+    _: number,
     e: React.SyntheticEvent<HTMLVideoElement, Event>
   ) => {
     setLoadedData((pre) => [...pre, e]);
@@ -70,7 +70,7 @@ const VideoCarousel = () => {
                 window.innerWidth < 760
                   ? "10vw" // mobile
                   : window.innerWidth < 1200
-                  ? "10vw" // tablet
+                  ? "6vw" // tablet
                   : "4vw", // laptop
             });
 
@@ -107,7 +107,7 @@ const VideoCarousel = () => {
         gsap.ticker.remove(animUpdate);
       }
     }
-  }, [videoId, startPlay]);
+  }, [videoId, startPlay, isPlaying]);
 
   useEffect(() => {
     if (loadedData.length > 3) {
