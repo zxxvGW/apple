@@ -44,7 +44,7 @@ interface nodesType {
 }
 
 function IPhone(props: IPhoneProps): JSX.Element {
-  const IPhoneModel = useGLTF("/models/secene.glb");
+  const IPhoneModel = useGLTF("/models/scene.glb");
 
   const { nodes, materials } = IPhoneModel as unknown as {
     nodes: nodesType;
