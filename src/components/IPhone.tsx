@@ -9,8 +9,47 @@ interface IPhoneProps {
   size: "small" | "large";
 }
 
+interface nodesType {
+  ttmRoLdJipiIOmf: THREE.Mesh;
+  DjsDkGiopeiEJZK: THREE.Mesh;
+  buRWvyqhBBgcJFo: THREE.Mesh;
+  MrMmlCAsAxJpYqQ_0: THREE.Mesh;
+  wqbHSzWaUxBCwxY_0: THREE.Mesh;
+  QvGDcbDApaGssma: THREE.Mesh;
+  vFwJFNASGvEHWhs: THREE.Mesh;
+  evAxFwhaQUwXuua: THREE.Mesh;
+  USxQiqZgxHbRvqB: THREE.Mesh;
+  TvgBVmqNmSrFVfW: THREE.Mesh;
+  GuYJryuYunhpphO: THREE.Mesh;
+  pvdHknDTGDzVpwc: THREE.Mesh;
+  CfghdUoyzvwzIum: THREE.Mesh;
+  DjdhycfQYjKMDyn: THREE.Mesh;
+  usFLmqcyrnltBUr: THREE.Mesh;
+  xXDHkMplTIDAXLN: THREE.Mesh;
+  vELORlCJixqPHsZ: THREE.Mesh;
+  EbQGKrWAqhBHiMv: THREE.Mesh;
+  EddVrWkqZTlvmci: THREE.Mesh;
+  KSWlaxBcnPDpFCs: THREE.Mesh;
+  TakBsdEjEytCAMK: THREE.Mesh;
+  IykfmVvLplTsTEW: THREE.Mesh;
+  wLfSXtbwRlBrwof: THREE.Mesh;
+  WJwwVjsahIXbJpU: THREE.Mesh;
+  YfrJNXgMvGOAfzz: THREE.Mesh;
+  DCLCbjzqejuvsqH: THREE.Mesh;
+  CdalkzDVnwgdEhS: THREE.Mesh;
+  NtjcIgolNGgYlCg: THREE.Mesh;
+  pXBNoLiaMwsDHRF: THREE.Mesh;
+  IkoiNqATMVoZFKD: THREE.Mesh;
+  rqgRAGHOwnuBypi: THREE.Mesh;
+}
+
 function IPhone(props: IPhoneProps): JSX.Element {
-  const { nodes, materials } = useGLTF("/models/scene.glb");
+  const IPhoneModel = useGLTF("/models/IPhoneModel.glb");
+
+  const { nodes, materials } = IPhoneModel as unknown as {
+    nodes: nodesType;
+    materials: { [key: string]: THREE.Material };
+  };
 
   const texture = useTexture(props.item.img);
 
